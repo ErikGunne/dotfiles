@@ -23,6 +23,7 @@ vim +PluginInstall +qall
 if [ $BYOBU_CONFIG_DIR ]; then
     cp ./.byobu/keybindings.tmux $BYOBU_CONFIG_DIR/keybindings.tmux
     touch $BYOBU_CONFIG_DIR/.always-select
+    echo "setw -g mouse on" >> $BYOBU_CONFIG_DIR/profile.tmux
 fi
 
 # Copy .flake8 config file.
